@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
 from datetime import datetime
@@ -57,6 +57,9 @@ def main():
         print(int(namespace.datetime.timestamp()))
     elif namespace.timestamp:
         print(namespace.timestamp.strftime('%Y-%m-%d %H:%M:%S'))
+    else:
+        # no options a specify, print current timestamp
+        print(int(datetime.today().timestamp()))
 
 
 if __name__ == '__main__':
